@@ -4,10 +4,11 @@ $(function () {
 
 	$("#nameform").on('submit', function (e) {
 		e.preventDefault();
-		var fname = $('#fname').val();
+		var fname = $('#fname').reverse().val();
 		var lname = $('#lname').val();
 		var newHTML = '<h1>' + fname + ' ' + lname + '</h1>';
 		$(".jumbotron").removeClass('d-none').html(newHTML);
 		return false;  //prevents reload on submit
 	});
 });
+$($("li").get().reverse()).each(function() { /* ... */ });
